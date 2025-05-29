@@ -46,3 +46,13 @@
   font-size: 2.5em;
   text-align: center;
 }
+
+.container {
+  background: #747bff;
+  color: rgb(2, 2, 96);
+  font-size: 60px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  max-width: 1000px;
+}
