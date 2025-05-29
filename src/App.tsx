@@ -6,7 +6,7 @@ const App: React.FC = () => {
     // 바벨에 의해 JS 코드로 변환됨
     return (
         <div>
-            <TodoList title = '오늘의 노동'></TodoList>
+            <TodoList title='오늘의 노동'></TodoList>
         </div>
     );
 }

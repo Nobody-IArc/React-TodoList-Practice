@@ -16,16 +16,16 @@ const TodoList: React.FC = () => {
     ]);
     return (
         <div>
-            <div className="container">
-                <h1 className='titlebk'>오늘의 노동</h1>
-                <div className='container'>
-                    <div className='board'>
-                        <ul>
-                            <li>{todos[0].text}</li>
-                            <li>{todos[1].text}</li>
-                            <li>{todos[2].text}</li>
-                        </ul>
-                    </div>
+            <h1 className='titlebk'>오늘의 노동</h1><p></p>
+            <div className='container'>
+                <div className='board'>
+                    <ul>
+                        {
+                            todos.map((todo: Todo) => (
+                                <li key={todo.id}>{ todo.text }</li>
+                            ))
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
