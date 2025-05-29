@@ -25,25 +25,30 @@ const TodoList: React.FC = () => {
     }
 
     return (
-        <div>
-            <h1 className='titlebk'>오늘의 노동</h1><p></p>
-            <div className='container'>
-                <div className='board'>
-                    <ul>
-                        {
-                            todos.map((todo: Todo) => (
-                                <li key={todo.id}>
+        <div className="container mt-5">
+            <h1 className="titlebk">오늘의 노동</h1>
+            <div className="card">
+                <div className="card-body">
+                    <ul className="list-group">
+                        {todos.map((todo) => (
+                            <li key = {todo.id}
+                            className="list-group-item d-flex justify-content-between align-items-center">
+                                <div className="form-check">
                                     <input
-                                        type='checkbox'
-                                        onChange={() => {
-                                            handleCheckBox(todo.id);
-                                        }}></input>
-                                    <span>{
-                                        todo.isChecked ? <del>{todo.text}</del> : <span>{todo.text}</span>
-                                    }</span>
-                                </li>
-                            ))
-                        }
+                                        type="checkbox"
+                                        className="form-check-input"
+                                        checked={todo.isChecked}
+                                        onChange={() => handleCheckBox(todo.id)}
+                                    />
+                                    <label className="form-check-label">
+                                        {
+                                            todo.isChecked ?
+                                                <del>{todo.text}</del> : <span>{todo.text}</span>
+                                        }
+                                    </label>
+                                </div>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
